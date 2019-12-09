@@ -3,7 +3,9 @@ pipeline {
     stages{
 	stage('Build') {
 	    steps {
-		echo 'Inicio'
+		sh '''
+		docker run -p 8081:8081 IMAGEID
+		'''
 	    }
 	}
     }
