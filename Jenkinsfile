@@ -8,4 +8,10 @@ pipeline {
     environment {
         CI = 'true'
     }    
+
+	stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
 }
