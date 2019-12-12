@@ -1,3 +1,3 @@
 FROM nginx:latest
-COPY IntegracionContinua /usr/share/nginx/html
+COPY ProyectoPoli /usr/share/nginx/html
 EXPOSE 80
