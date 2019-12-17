@@ -1,2 +1,11 @@
 sudo: false
 language: minimal
+
+services: 
+  -docker
+
+before_install:
+  - docker build -t Ngnix.
+  - docker run -d -p 127.0.0.1:80:4567 Ngnix /bin/sh -c "cd /root/Ngnix; "
+  - docker ps -a
+  - docker run Ngnix /bin/sh -c "cd /root/Ngnix;
