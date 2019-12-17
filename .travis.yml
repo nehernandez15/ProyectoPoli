@@ -1,11 +1,16 @@
 sudo: false
 language: minimal
 
+notifications:
+  email: true
+
 services: 
   -docker
-  
+
 
 before_install: 
+
+-  docker build -t carlad/sinatra 
  - docker build -t comics:1.0 .
  
 
