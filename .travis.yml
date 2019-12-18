@@ -15,8 +15,7 @@ services:
 before_install: 
 
  - docker build -t comics:1.0 .
- - docker images
- - docker ps
+ 
  
 
  
