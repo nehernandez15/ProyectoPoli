@@ -5,9 +5,12 @@ notifications:
     slack:
     on_success: always
     secure: IYB72v6BEnrBz0hD7Zist2EQqjdOdsM/uIuPqV91erPGk/EDg+E/A66t22nDKZW+bJbgZTx5n3TBPDod8u9adXI3OH4aOuwdbzEFCi6nBc/QJfwuDR97s8/F6Yb3/2H6JXrxwbuy05bBVmnscC9viw+MI4P8rDBRutwde5Pz6mc=
+
 services: 
   -docker
-before_install: 
 
+before_install: 
  - docker build -t comics:1.0 .
+ - docker images
+ - docker ps
 
